@@ -81,3 +81,12 @@ export const getShowTimeMovieListServices = async () => {
 //       .catch((err) => reject(err));
 //   });
 // };
+export const getComingSoonMovieListServices = async () => {
+  // async|await
+  try {
+    const respon = await getComingSoonMovieList();
+    return await respon.data;
+  } catch (err) {
+    return { ...err }.response.data;
+  }
+};

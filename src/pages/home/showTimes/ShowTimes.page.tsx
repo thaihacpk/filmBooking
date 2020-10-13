@@ -14,7 +14,6 @@ import { UpdateFormDialogComponent } from '../../../components/formDialog/Update
 import { AlertSnackbarComponent } from '../../../components/alert/AlertSnackbar.component';
 //Redux
 import { connect } from 'react-redux';
-import LoadingComponent from '../../../common/loading/Loading.component';
 
 const isAdmin = () => {
     if (JSON.parse(localStorage.getItem("userLogin") || "{}").maLoaiNguoiDung === "QuanTri") {

@@ -38,8 +38,8 @@ class ComingSoonPage extends React.Component<ComingSoonPagerops, ComingSoonPageS
     }
 
     componentDidMount = () => {
-        // this.doGetComingSoonMovieList();
-        this.props.getData();
+        this.doGetComingSoonMovieList();
+        // this.props.getData();
     }
 
     nextProperty = () => {

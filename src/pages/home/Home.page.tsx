@@ -6,13 +6,13 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import { ProtectedRoute } from '../../auth/protected.route';
 //Redux - action
 import { getMoviesAction } from '../../core/redux/actions/movieManager.action';
+import ComingSoonPage from './comingSoon/ComingSoon.page';
+import ContactUsPage from './contactUs/ContactUs.page';
+import ReviewsPage from './newReviews/Reviews.page';
 import ShowTimesPage from './showTimes/ShowTimes.page';
 // Components
 const NavComponent = React.lazy(() => import('../../common/nav/Nav.component'));
 const NewOnScreensPage = React.lazy(() => import('./newOnScreens/NewOnScreens.page'));
-const ComingSoonPage = React.lazy(() => import('./comingSoon/ComingSoon.page'));
-const ReviewsPage = React.lazy(() => import('./newReviews/Reviews.page'));
-const ContactUsPage = React.lazy(() => import('./contactUs/ContactUs.page'));
 const MovieDetailPage = React.lazy(() => import('../movie/detail/MovieDetail.page'));
 const BookSeatPage = React.lazy(() => import('../movie/seat/BookSeat.page'));
 const LoginPage = React.lazy(() => import('../login/Login.page'));
