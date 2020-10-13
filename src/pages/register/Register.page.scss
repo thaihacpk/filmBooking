@@ -1,0 +1,26 @@
+.register {
+    min-width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+@media only screen and (max-width: 1440px) {
+    .makeStyles-paper-2 {
+        padding: 10px 60px 20px !important;
+        margin-top: 35px !important;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .MuiFormControl-marginNormal {
+        margin-top: 8px !important;
+    }
+    .MuiTypography-h3 {
+        font-size: 30px !important;
+    }
+    
+}

@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-yellow: #eaec2a;
+  --color-black: #05090a;
+  --color-gray: #34383b;
+  --color-bg-yellow: #eaec2a;
+  --color-contrast-yellow: #000000;
+  --color-bg-black: #05090a;
+  --color-contrast-black: #ffffff;
+  --color-bg-gray: #34383b;
+  --color-contrast-gray: #ffffff;
+  --border-radius-1: 5px;
+}
+
+// Typo
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+///
+.overlay {
+  background: linear-gradient(to bottom, #0f1316, #4040424d);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+

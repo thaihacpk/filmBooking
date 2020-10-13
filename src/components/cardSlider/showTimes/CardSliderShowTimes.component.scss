@@ -1,0 +1,212 @@
+.card-slider-showTimes {
+    width: 480px;
+    height: 100vh;
+    flex: 1;
+    position: relative;
+    opacity: 0.6;
+    transition: all 0.4s;
+
+    &:hover {
+        opacity: 1;
+        .card-slider-showTimes__detail {
+            height: 120px;
+        }
+        img {
+            transform: scale(1.01, 1.03);
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scaleX(0.99);
+        transition: transform 0.35s;
+        overflow: hidden;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    &__content {
+        width: 100%;
+        padding: 20px 40px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        h4 {
+            opacity: 0.9;
+            margin-bottom: 25px;
+            margin-top: 25px;
+        }
+    }
+
+    &__detail {
+        height: 0;
+        overflow: hidden;
+        transition: all 0.4s;
+    }
+
+    &__btn-wrapper {
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__btn {
+        display: grid;
+        grid-template-columns: 50px auto;
+        column-gap: 10px;
+        margin-right: 40px;
+        cursor: pointer;
+
+        & > div,
+        a {
+            background-color: var(--color-black);
+            color: var(--color-yellow);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.4s;
+            align-self: center;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--color-bg-yellow);
+                color: var(--color-contrast-yellow);
+            }
+        }
+        p {
+            align-self: center;
+        }
+    }
+
+    &__ticket-wrapper {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+
+        h4 {
+            margin: 0;
+            margin-right: 10px;
+        }
+
+        *:not(.clear) {
+            float: left;
+        }
+    }
+
+    &__ticket-btn {
+        background-color: var(--color-black);
+        color: var(--color-yellow);
+        transition: all 0.4s;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        position: relative;
+
+        a {
+            color: var(--color-yellow);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 0;
+            transition: 0.4s;
+            padding: 2px 0;
+            border-radius: 0 0 5px 5px;
+            background-color: var(--color-contrast-yellow);
+        }
+        h3 {
+            margin: 0;
+        }
+
+        &:hover {
+            background-color: var(--color-bg-yellow);
+
+            a {
+                color: var(--color-contrast-yellow);
+            }
+
+            &::after {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+
+    .control {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        padding-left: 50px;
+        transform: translateY(-50%);
+        div {
+            margin: 10px 0;
+            &:hover {
+                button {
+                    background-color: var(--color-bg-yellow);
+                    color: var(--color-constrast-yellow);
+                }
+
+                p {
+                    opacity: 1;
+                }
+            }
+        }
+        button {
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--color-bg-gray);
+            color: var(--color-yellow);
+            transition: all 0.3s;
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1680px) {
+    .card-slider-showTimes {
+        width: 420px;
+    }
+}
+
+@media only screen and (max-width: 1470px) {
+    .card-slider-showTimes {
+        width: 490px;
+    }
+}
+
+@media only screen and (max-width: 1225px) {
+    .card-slider-showTimes {
+        width: 408.3px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card-slider-showTimes {
+        width: 384px;
+        &__ticket-wrapper {
+            h4 {
+                display: none;
+            }
+        }
+    }
+}

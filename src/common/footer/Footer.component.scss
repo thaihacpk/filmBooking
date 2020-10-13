@@ -1,0 +1,25 @@
+.footer {
+    padding: 25px 0;
+    background-color: #0f1316;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    h4 {
+        color: var(--color-yellow);
+    }
+    a {
+        color: var(--color-contrast-black);
+    }
+    &__links {
+        ul {
+            display: flex;
+            align-items: center;
+        }
+        li {
+            margin: 0 5px;
+        }
+    }
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,109 @@
+.nav {
+    height: 84px; // 70
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70px auto;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    &__toggle {
+        height: 100%;
+        width: 100%;
+        background-color: var(--color-bg-yellow);
+        color: var(--color-contrast-yellow);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    &__view {
+        &--no-bg {
+            background-color: transparent;
+        }
+    }
+
+    &__userinfo {
+        height: 100%;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: var(--color-yellow);
+        & > div {
+            display: flex;
+            align-items: center;
+            margin: 0 8px;
+            cursor: pointer;
+        }
+    }
+
+    &__menu {
+        height: 100%;
+        background-color: #05090aad;
+        color: var(--color-contrast-black);
+        backdrop-filter: blur(10px);
+
+        & > div {
+            height: 50%;
+
+            &:first-child {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            &:last-child {
+                border-top: 1px solid gray;
+                opacity: 0.3;
+            }
+        }
+    }
+
+    &__item {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: var(--color-contrast-black);
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            p {
+                opacity: 1;
+                color: var(--color-yellow);
+            }
+        }
+
+        p {
+            opacity: 0.5;
+            transition: all 0.3s;
+            pointer-events: none;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        &--active {
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 7px;
+                height: 7px;
+                background-color: var(--color-yellow);
+                border-radius: 50%;
+                position: absolute;
+                bottom: -3.5px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            p {
+                opacity: 1;
+                color: var(--color-yellow);
+            }
+        }
+    }
+}
